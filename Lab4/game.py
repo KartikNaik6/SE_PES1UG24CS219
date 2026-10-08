@@ -11,7 +11,10 @@ FOOT = 12
 
 def ship_color(fuel_ratio):
     """Return an (r, g, b) hull colour for the given fuel ratio (1.0 = full), or None for the default."""
-    pass
+    r = int(255 - 25 * fuel_ratio)
+    g = int(230 * fuel_ratio)
+    b = int(240 * fuel_ratio)
+    return (r, g, b)
 
 
 def on_landing(score):
